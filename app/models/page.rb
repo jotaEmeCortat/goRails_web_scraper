@@ -12,9 +12,9 @@ class Page < ApplicationRecord
              when "text"
                scraper.text(selector: selector).downcase == match_text.downcase
              when "exists"
-               scraper.present?
+               scraper.present?(selector: selector)
              when "not_exists"
-               !scraper.present?
+               !scraper.present?(selector: selector)
              end
     results.create(success: result)
   end

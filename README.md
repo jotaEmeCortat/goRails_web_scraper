@@ -83,3 +83,9 @@ class Page < ApplicationRecord
   end
 end
 ```
+
+Creater a new controller for the checks.
+
+```bash
+rails g controller Checks
+```
